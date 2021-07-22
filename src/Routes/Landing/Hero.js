@@ -6,12 +6,20 @@ import { Typography, Button, Grid } from '@material-ui/core'
 import People from '../../Assets/Background/PeopleBg.png';
 
 const useStyle = makeStyles({
-    root: {
+    rootDark: {
         backgroundColor: '#151515',
         position: 'relative',
         overflow: 'hidden',
         zIndex: '0',
     },
+
+    rootLight: {
+        backgroundColor: '#fcfcfc',
+        position: 'relative',
+        overflow: 'hidden',
+        zIndex: '0',
+    },
+
 
     circle: {
         position: 'absolute',
@@ -65,7 +73,7 @@ const useStyle = makeStyles({
         },
     },
 
-    header: {
+    headerDark: {
         fontSize: '3rem',
         color: '#FE9F30',
         letterSpacing: '2px',
@@ -82,8 +90,47 @@ const useStyle = makeStyles({
         },
     },
 
-    description: {
+    headerLight: {
+        fontSize: '3rem',
+        color: '#FF8A01',
+        letterSpacing: '2px',
+        fontFamily: 'Mont-B',
+
+        '@media (max-width: 600px)': {
+            fontSize: '2.8rem',
+            letterSpacing: '3px',
+            lineHeight: '120%',
+        },
+
+        '@media (min-width: 601px) and (max-width: 1024px)': {
+            fontSize: '1.7rem',
+        },
+    },
+
+
+    descriptionDark: {
         color: '#A5A5A5',
+        margin: '2rem 0',
+        letterSpacing: '1px',
+        lineHeight: '180%',
+        fontFamily: 'Mont-R',
+        width: '95%',
+
+        '@media (max-width: 600px)': {
+            textAlign: 'center',
+            lineHeight: '190%',
+            margin: '3rem 0',
+            width: '100%',
+        },
+
+        '@media (min-width: 601px) and (max-width: 1024px)': {
+            fontSize: '.75rem',
+            lineHeight: '160%',
+        },
+    },
+
+    descriptionLight: {
+        color: '#565656',
         margin: '2rem 0',
         letterSpacing: '1px',
         lineHeight: '180%',
@@ -133,11 +180,13 @@ const useStyle = makeStyles({
 
 });
 
-export default function Hero() {
+
+
+export default function Hero({ nightMode }) {
     const classes = useStyle();
 
     return (
-        <div className={classes.root}>
+        <div className={nightMode ? classes.rootDark : classes.rootLight}>
 
             <div className={classes.circle}></div>
 
@@ -153,10 +202,10 @@ export default function Hero() {
                         className={classes.textWrapper}
                     >
                         <div >
-                            <Typography variant='h1' className={classes.header}>
+                            <Typography variant='h1' className={nightMode ? classes.headerDark : classes.headerLight}>
                                 Learn New Skills From A Mentor or Be A Mentor
                             </Typography>
-                            <Typography variant='body1' className={classes.description}>
+                            <Typography variant='body1' className={nightMode ? classes.descriptionDark : classes.descriptionLight}>
                                 Being a person with multiple skill sets makes provides you higher chances to get hired. Here in People we believe in growing and enhancing knowledge, problem solving and technniques.
                             </Typography>
                             <Button variant='contained' className={classes.button} href='/'>
