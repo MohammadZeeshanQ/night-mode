@@ -5,7 +5,7 @@ import { AppBar, Toolbar, IconButton, Button, SwipeableDrawer, List, ListItem, T
 // Icons
 import MenuIcon from '@material-ui/icons/Menu';
 import CloseIcon from '@material-ui/icons/Close';
-import PersonIcon from '@material-ui/icons/Person';
+// import PersonIcon from '@material-ui/icons/Person';
 import NightsStayIcon from '@material-ui/icons/NightsStay';
 import Brightness4Icon from '@material-ui/icons/Brightness4';
 
@@ -15,7 +15,7 @@ import Logo from '../Assets/Background/logo.png';
 
 const useStyles = makeStyles({
     rootDark: {
-        backgroundColor: '#151515',
+        backgroundColor: '#242424',
     },
 
     rootLight: {

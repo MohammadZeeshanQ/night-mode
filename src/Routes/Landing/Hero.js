@@ -7,17 +7,17 @@ import People from '../../Assets/Background/PeopleBg.png';
 
 const useStyle = makeStyles({
     rootDark: {
-        backgroundColor: '#151515',
+        backgroundColor: '#242424',
         position: 'relative',
-        overflow: 'hidden',
         zIndex: '0',
+        overflow: 'hidden',
     },
 
     rootLight: {
         backgroundColor: '#fcfcfc',
         position: 'relative',
-        overflow: 'hidden',
         zIndex: '0',
+        overflow: 'hidden',
     },
 
 

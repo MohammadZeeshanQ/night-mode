@@ -1,0 +1,40 @@
+.boxWrapperDark{
+    display: flex;
+    align-items: center;
+    padding: 2rem;
+    margin: 2rem 3rem;
+
+    background: rgba(  75, 75, 75, 0.25 );
+    backdrop-filter: blur( 15.5px );
+    -webkit-backdrop-filter: blur( 15.5px );
+    border-radius: 10px;
+}
+
+.boxWrapperLight{
+    display: flex;
+    align-items: center;
+    padding: 2rem;
+    margin: 2rem 3rem;
+
+    background: rgba( 255, 129, 0, 0.50 );
+    box-shadow: 1px 4px 15px #A2A2A2;
+    backdrop-filter: blur( 13.0px );
+    -webkit-backdrop-filter: blur( 13.0px );
+    border-radius: 10px;
+}
+
+.boxIconWrapperDark{
+    padding: 1rem;
+    background: rgba( 98, 98, 98, 0.25 );
+    backdrop-filter: blur( 15.5px );
+    -webkit-backdrop-filter: blur( 15.5px );
+    border-radius: 1rem 1rem 0 1rem;
+}
+
+.boxIconWrapperLight{
+    padding: 1rem;
+    background: rgba( 98, 98, 98, 0.25 );
+    backdrop-filter: blur( 15.5px );
+    -webkit-backdrop-filter: blur( 15.5px );
+    border-radius: 1rem 1rem 0 1rem;
+}
