@@ -32,10 +32,6 @@ const useStyles = makeStyles({
         '@media (max-width: 600px)': {
             width: '80%',
         },
-
-        '@media (min-width: 601px) and (max-width: 1024px)': {
-            width: '90%',
-        },
     },
 
     logoWrapper: {
@@ -152,7 +148,7 @@ const useStyles = makeStyles({
 
     paperLight: {
         width: 290,
-        backgroundColor: '#009E81',
+        backgroundColor: '#f39f30',
         borderRadius: '2rem 0 0 2rem',
     },
 
@@ -160,9 +156,14 @@ const useStyles = makeStyles({
         display: 'flex',
         alignItems: 'center',
 
-        '@media (max-width: 1024px)': {
+        '@media (max-width: 1025px)': {
             display: 'none',
         },
+    },
+
+    switchMobileContainer: {
+        display: 'flex',
+        alignItems: 'center',
     },
 
     switch_base: {
@@ -293,6 +294,25 @@ export default function NavBar({ setNightMode, nightMode }) {
                         </ListItem>
                         <ListItem>
                             <Button className={classes.mobileButton} variant='outlined' onClick={drawerHandler}>Become a Mentor</Button>
+                        </ListItem>
+                        <ListItem>
+                            <div className={classes.switchMobileContainer}>
+                                <NightsStayIcon
+                                    className={nightMode ? classes.switchIconsLight : classes.switchIconsDark}
+                                />
+                                <Switch
+                                    classes={{
+                                        switchBase: classes.switch_base,
+                                        colorPrimary: classes.switch_primary,
+                                    }}
+                                    size='medium'
+                                    onChange={switchHandler}
+                                />
+
+                                <Brightness4Icon
+                                    className={nightMode ? classes.switchIconsLight : classes.switchIconsDark}
+                                />
+                            </div>
                         </ListItem>
                     </List>
                 </SwipeableDrawer>
